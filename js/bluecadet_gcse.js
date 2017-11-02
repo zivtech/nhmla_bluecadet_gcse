@@ -1,5 +1,5 @@
-(function() {
-  var cx = '003382710944146401217:xm9m7zbmzek';
+(function () {
+  var cx = drupalSettings.gsearch.gcse_id;
   var gcse = document.createElement('script');
   gcse.type = 'text/javascript';
   gcse.async = true;

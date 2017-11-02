@@ -21,7 +21,7 @@ class GSearchSettings extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    $settings = \Drupal::state()->get('bluecadet_gcse.settings', ['gcse_id' => '', 'gcse_path' => '']);
+    $settings = \Drupal::state()->get('bluecadet_gcse.settings', ['gcse_id' => '', 'gcse_path' => 'gsearch']);
 
     $form['settings']['#tree'] = TRUE;
 
@@ -62,5 +62,8 @@ class GSearchSettings extends FormBase {
 
     $settings = $values['settings'];
     \Drupal::state()->set('bluecadet_gcse.settings', $settings);
+
+    // Rebuild routes.
+    \Drupal::service("router.builder")->rebuild();
   }
 }

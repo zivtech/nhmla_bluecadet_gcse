@@ -9,15 +9,15 @@ class GCSESearch extends ControllerBase {
 
   public function searchDisplay($search_term = '', Request $request) {
     $build = [];
-    $build['#attached']['library'][] = 'bluecadet_gcse/gcse';
 
-    // $build['form'] = \Drupal::formBuilder()->getForm(\Drupal\gcse\Form\GSearch::class);
+    $settings = \Drupal::state()->get('bluecadet_gcse.settings', ['gcse_id' => '', 'gcse_path' => 'gsearch']);
+
+    $build['#attached']['drupalSettings']['gsearch']['gcse_id'] = $settings['gcse_id'];
+    $build['#attached']['library'][] = 'bluecadet_gcse/gcse';
 
     $build['search'] = [
       '#theme' => 'gcse_page',
     ];
-
-
 
     return $build;
   }
