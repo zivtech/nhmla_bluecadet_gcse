@@ -1,0 +1,7 @@
+gcse.search:
+  path: '/search'
+  defaults:
+    _controller: 'Drupal\bluecadet_gcse\Controller\GCSESearch::searchDisplay'
+    _title: 'Search'
+  requirements:
+    _permission: 'access content'

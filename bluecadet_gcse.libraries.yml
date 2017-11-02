@@ -1,0 +1,4 @@
+gcse:
+  version: 1.x
+  js:
+    js/gcse.js: {}
