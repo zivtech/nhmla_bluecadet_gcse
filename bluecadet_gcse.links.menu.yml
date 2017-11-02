@@ -1,0 +1,6 @@
+gcse.search_settings:
+  title: 'Google Search Settings'
+  parent: system.admin_config_search
+  description: "Google Search Settings"
+  route_name:  gcse.search_settings
+  weight: 100
