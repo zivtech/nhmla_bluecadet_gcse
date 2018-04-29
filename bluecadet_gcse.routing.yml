@@ -4,7 +4,7 @@ gcse.search_settings:
     _form: 'Drupal\bluecadet_gcse\Form\GSearchSettings'
     _title: 'Google Search Settings'
   requirements:
-    _permission: 'access content'
+    _permission: 'administer bc google site search settings'
 
 route_callbacks:
   - '\Drupal\bluecadet_gcse\Routing\GSearchRoutes::routes'
