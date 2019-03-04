@@ -42,6 +42,7 @@ class GSearch extends FormBase {
     $form['actions']['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Search'),
+      '#id' => 'gcse-search-submit',
       // Prevent op from showing up in the query string.
       '#name' => '',
     ];
