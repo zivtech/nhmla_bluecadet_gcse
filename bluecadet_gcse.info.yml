@@ -1,5 +1,5 @@
 type: module
-name: Blucedet's Google Custom Search Engine
+name: Bluecadet's Google Custom Search Engine
 description: 'Adds searching through Google Custom Search Engine.'
 package: Bluecadet
 version: '8.x-1.0.4'
