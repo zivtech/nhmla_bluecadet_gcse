@@ -2,3 +2,8 @@
 
 # Bluecadet's Google Custom Search Engine
 
+## Changelog
+
+### 8.x-1.0.5
+
+- Updated dependencies so we can use Composer v2
