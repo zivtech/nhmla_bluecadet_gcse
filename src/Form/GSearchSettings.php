@@ -66,6 +66,7 @@ class GSearchSettings extends FormBase {
     // Rebuild routes.
     \Drupal::service("router.builder")->rebuild();
 
-    drupal_set_message('You have saved your settings.');
+    $this->messenger()->addMessage('You have saved your settings.');
   }
+
 }
