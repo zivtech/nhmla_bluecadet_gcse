@@ -20,7 +20,7 @@ class GSearchFormBlock extends BlockBase {
 	public function build() {
     $build = [];
 
-    $build['form'] = \Drupal::formBuilder()->getForm(\Drupal\gcse\Form\GSearch::class);
+    $build['form'] = \Drupal::formBuilder()->getForm(\Drupal\bluecadet_gcse\Form\GSearch::class);
 
     return $build;
 	}
