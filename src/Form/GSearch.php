@@ -4,6 +4,7 @@ namespace Drupal\bluecadet_gcse\Form;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Form\FormBase;
+use Drupal\Core\Url;
 
 /**
  * Configure Paragraph examples to upload images per para bundle.
@@ -24,7 +25,7 @@ class GSearch extends FormBase {
     // Disable caching on this form.
     $form_state->setCached(FALSE);
 
-    $form['#action'] = $this->url('gcse.search');
+    $form['#action'] = Url::fromRoute('gcse.search')->toString();
     $form['#method'] = 'get';
 
     $form['keys'] = [
