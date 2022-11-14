@@ -10,3 +10,21 @@ function bluecadet_gcse_theme($existing, $type, $theme, $path) {
     ),
   );
 }
+
+/**
+ * Implements hook_metatags_attachments_alter().
+ */
+function bluecadet_gcse_metatags_attachments_alter(array &$metatag_attachments) {
+  if (\Drupal::routeMatch()->getRouteName() == 'gcse.search') {
+    $metatag_attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'robots',
+          'content' => 'noindex,nofollow',
+        ],
+      ],
+      'robots',
+    ];
+  }
+}
